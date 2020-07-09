@@ -519,35 +519,37 @@ input[type=submit] {
   }
   .social-media {
     margin-left: 5%;
+    width: 40%;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
   /*Desktop styles here*/
   /* General styles */
   main {
     padding-top: 20%;
   }
+  .page-main {
+    margin-top: -30px;
+  }
   .nav {
     margin: 40px 0
   }
   .nav img {
-    width: 10%;
+    width: 5%;
   }
   h1 {
     font-size: 2.25em;
   }
   h2 {
-    font-size: 2em;
+    font-size: 1.25em;
+    margin-top: 1em;
   }
   p {
-    font-size: 1.5em;
+    font-size: 1.2 em;
   }
   footer {
-    height: 100px;
-  }
-  footer p {
-    font-size: 0.75em;
+    height: 50px;
   }
  
   /* Nav Page */
@@ -556,26 +558,56 @@ input[type=submit] {
   }
   
   /* About page */
+  .title .logo {
+    width: 10%;
+    height: 100%;
+  }
+  .title .heading {
+    padding-left: 1%;
+    padding-bottom: 2%;
+  }
   .heading img {
-    margin-left: -20%;
+    margin-left: -15%;
+    width: 7%
   }
   
   /* Services */
   #services .heading img {
     margin-left: -26%;
   }
+  #services h2 {
+    width: 100%;
+  }
 
   /* Portfolio */
   #portfolio .heading img {
     margin-left: -28%;
   }
+  #portfolio .project {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
   #portfolio .project img {
     margin-top: 2em;
     margin-left: 10%;
-    width: 80%;
+    width: 50%;
   }
   #portfolio .project p {
     margin-top: 0.5em;
+  }
+  #portfolio .project img {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%
+  }
+  #portfolio .project .article {
+    width: 45%;
+    padding: 2%;
+  }
+  #portfolio .reviews {
+    width: 90%;
   }
 
   /* Contact */
@@ -583,13 +615,21 @@ input[type=submit] {
     margin-left: -24%;
   }
   input[type=text], textarea {
-    width: 100%;
+    width: 95%;
+   
   }
   .contact-form {
-    width: 94%;
+    width: 45%;
+  }
+  .my-details {
+    width: 45%;
+    padding-left: 5em;
   }
   .social-media {
-    margin-left: 5%;
+    width: 45%;
+    margin-top: -100px;
+    margin-left: 50%;
+    padding-left: 2.5em;
   }
 }
 
