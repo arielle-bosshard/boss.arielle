@@ -22,7 +22,7 @@
   <script src="https://kit.fontawesome.com/9c34d6d036.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body id="contact">
   <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
@@ -32,33 +32,40 @@
       <div class="nav">
         <img src="../img/nav-three.png" alt="Menu Icon">
       </div>
-      <div class="title">
-        <img src="../img/logo-text.png" alt="Logo">
-      <h1>Contact</h1>
-      </div>
     </header>
 
     <main class="page-main">
-      <div class="contact-form">
-        <form action="ariellebosshard@outlook.com">
-          <input type="text" name="name" value="Your name">
-          <input type="text" name="name" value="Your email">
-          <input type="text" name="name" value="Your enquery">
-          <input type="button" value="Send!">
-        </form>
+      <div class="title">
+        <img src="../img/logo-text.png" alt="Logo">
+        <div class="heading">
+          <h1>Contact</h1>
+          <img src="../img/rectangle.png" alt="underline">
+        </div>
       </div>
-      <div class="my-details">
-        <h2>My Details</h2>
-        <p>ariellebosshard@outlook.com<br>
-        +41 79 309 85 92<br>
-        I am currently based in Lugano, Switzerland</p>
-      </div>
-      <div class="social-media">
-        <h2>Follow Me</h2>
-        <p class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></p>
-        <p class="icon"><i class="fa fa-behance" aria-hidden="true"></i></p>
-        <p class="icon"><i class="fa fa-instagram" aria-hidden="true"></i></p>
-        <p class="icon"><i class="fa fa-github" aria-hidden="true"></i></p>
+      <div class="content">
+        <div class="contact-form">
+          <h2>Leave a message</h2>
+          <form action="ariellebosshard@outlook.com">
+            <input type="text" name="name" placeholder="Your name">
+            <input type="text" name="email" placeholder="Your email">
+            <textarea id="subject" name="subject" placeholder="Your enquery" style="height: 50px"></textarea>
+            <input type="submit" value="Send">
+          </form>
+        </div>
+        <div class="my-details">
+          <h2>My Details</h2>
+          <p>Arielle Bosshard<br>
+            ariellebosshard@outlook.com<br>
+            +41 79 309 85 92<br>
+            Currently based in Lugano, Switzerland</p>
+        </div>
+        <div class="social-media">
+          <h2>Follow Me</h2>
+          <p class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></p>
+          <p class="icon"><i class="fa fa-behance" aria-hidden="true"></i></p>
+          <p class="icon"><i class="fa fa-instagram" aria-hidden="true"></i></p>
+          <p class="icon"><i class="fa fa-github" aria-hidden="true"></i></p>
+        </div>
       </div>
     </main>
 

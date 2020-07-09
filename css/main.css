@@ -114,7 +114,6 @@ body {
 
 .container {
   min-height: 100%;
-  position: relative;
 }
 
 main {
@@ -123,11 +122,11 @@ main {
   align-items: center;
   flex-direction: column;
   clear: both;
-  padding-top: 50px;
+  padding-top: 35%;
   padding-bottom: 50px;
 }
 
-h1, h2 {
+h1 {
   font-size: 1.2em;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
@@ -136,8 +135,18 @@ h1, h2 {
   margin-bottom: 0;
 }
 
+h2 {
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: #5e5e5e;
+  margin: 1.25em 0 0.5em 0;
+}
+
 p {
   font-size: 0.75em;
+  line-height: 1.7em;
+  margin: 1.75em 0;
 }
 
 ul, 
@@ -201,6 +210,9 @@ header{
 
 /***** NAV PAGE *****/
 
+#nav-page main {
+  padding-top: 20%;
+}
 .logo-nav {
   width: 100%;
   display: flex;
@@ -227,15 +239,22 @@ header{
   margin-bottom: 1.75em;
 }
 
-/***** ABOUT PAGE *****/
+/***** PAGES *****/
+/* remove relative in container for footer */
 .page-main {
   margin-top: 0;
   padding-top: 0;
+  display: flex;
+  justify-content: center;
 }
-.title {
-  width: 100%;
+.title, .content {
+  width: 90%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+}
+.title {
+  margin-top: -40px;
 }
 .title img {
   width: 30%;
@@ -245,27 +264,102 @@ header{
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  padding-bottom: 5%;
+  padding-left: 2%;
+  padding-bottom: 6%;
 }
 .heading img {
   width: 15%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  margin-left: -25%;
 }
+
 
 /***** SERVICES PAGE *****/
 
-
+#services .heading img {
+  margin-left: -31%;
+}
+#services p {
+  margin: 0;
+}
 
 /***** PORTFOLIO PAGE *****/
 
+#portfolio .heading img {
+  margin-left: -35%;
+}
+#portfolio .project {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#portfolio .project img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5em;
+}
+#portfolio .project h2 {
+  margin: 0.5em 0 0 0;
+}
+#portfolio .project p {
+  margin: 0;
+}
+.reviews h2 {
+  margin-top: 2em;
+}
+.reviews p {
+  margin-top: 0.5em;
+}
 
+#portfolio footer {
+  clear: both;
+  position: inherit;
+}
 
 /***** CONTACT PAGE *****/
 
+#contact .heading img {
+  margin-left: -29%;
+}
 
+input[type=text], textarea {
+  font-size: 0.75em;
+  box-sizing: content-box;
+  border: none;
+  border-bottom: 1px solid #5e5e5e;
+  width: 92%;
+  color: #5e5e5e;
+  font-style: italic;
+  padding: 1em;
+  outline: none;
+}
+ 
+input[type=submit] {
+  width: 93%;
+  padding: 1em 0;
+  margin: 1em;
+  background-color: whitesmoke;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 0.75em;
+  color: #5e5e5e;
+  border: none;
+  text-align: center;
+}
 
+#contact p {
+  margin: 0;
+  padding-left: 5px;
+}
+#contact .social-media p {
+  font-size: 1em;
+  float: left;
+  padding-right: 20px;
+}  
 
 
 /* ==========================================================================
@@ -357,8 +451,146 @@ header{
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px) {
+  /*Tablet styles here*/
+  /* General styles */
+  main {
+    padding-top: 20%;
+  }
+  .nav {
+    margin: 40px 0
+  }
+  .nav img {
+    width: 10%;
+  }
+  h1 {
+    font-size: 1.75em;
+  }
+  h2 {
+    font-size: 1.4em;
+  }
+  p {
+    font-size: 1em;
+  }
+  footer {
+    height: 100px;
+  }
+  footer p {
+    font-size: 0.75em;
+  }
+ 
+  /* Nav Page */
+  .logo-nav img {
+    width: 40%;
+  }
+  
+  /* About page */
+  .heading img {
+    margin-left: -20%;
+  }
+  
+  /* Services */
+  #services .heading img {
+    margin-left: -26%;
+  }
+
+  /* Portfolio */
+  #portfolio .heading img {
+    margin-left: -28%;
+  }
+  #portfolio .project img {
+    margin-top: 2em;
+    margin-left: 10%;
+    width: 80%;
+  }
+  #portfolio .project p {
+    margin-top: 0.5em;
+  }
+
+  /* Contact */
+  #contact .heading img {
+    margin-left: -24%;
+  }
+  input[type=text], textarea {
+    width: 100%;
+  }
+  .contact-form {
+    width: 94%;
+  }
+  .social-media {
+    margin-left: 5%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  /*Desktop styles here*/
+  /* General styles */
+  main {
+    padding-top: 20%;
+  }
+  .nav {
+    margin: 40px 0
+  }
+  .nav img {
+    width: 10%;
+  }
+  h1 {
+    font-size: 2.25em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  p {
+    font-size: 1.5em;
+  }
+  footer {
+    height: 100px;
+  }
+  footer p {
+    font-size: 0.75em;
+  }
+ 
+  /* Nav Page */
+  .logo-nav img {
+    width: 40%;
+  }
+  
+  /* About page */
+  .heading img {
+    margin-left: -20%;
+  }
+  
+  /* Services */
+  #services .heading img {
+    margin-left: -26%;
+  }
+
+  /* Portfolio */
+  #portfolio .heading img {
+    margin-left: -28%;
+  }
+  #portfolio .project img {
+    margin-top: 2em;
+    margin-left: 10%;
+    width: 80%;
+  }
+  #portfolio .project p {
+    margin-top: 0.5em;
+  }
+
+  /* Contact */
+  #contact .heading img {
+    margin-left: -24%;
+  }
+  input[type=text], textarea {
+    width: 100%;
+  }
+  .contact-form {
+    width: 94%;
+  }
+  .social-media {
+    margin-left: 5%;
+  }
 }
 
 @media print,
