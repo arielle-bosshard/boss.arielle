@@ -26,28 +26,55 @@
 
     <header>
       <div class="nav">
-        <a href="nav/index.html"><img src="img/closed-nav.png" alt="Menu Icon"></a> 
+        <span onclick="openNav()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </span>
       </div>
     </header>
     
     <main>
+      <!-- The overlay -->
+      <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+          <a href="about/index.html">About</a>
+          <a href="services/index.html">Services</a>
+          <a href="portfolio/index.html">Portfolio</a>
+          <a href="contact/index.html">Contact</a>
+        </div>
+
+      </div>
+
       <div class="logo-main">
-        <img src="img/logo.png" alt="Logo">
+        <img src="img/logo-text.png" alt="Logo">
       </div>
     
     </main>
 
     <footer>
-      <div class="media">
-        <p>ariellebosshard@outlook.com| 
-          <a href="https://www.linkedin.com/in/arielle-bosshard-509583110/" > LinkedIn </a> |  
-          <a href="https://www.behance.net/ariellebosshard" > Behance</a> | 
-          <a href="https://www.instagram.com/rel._.boss/" > Instagram</a> |  
-          <a href="https://github.com/arielle-bosshard" > Github</a></p>
-      </div>
-      <div class="copyright">
-        <p>copyright2020 | Boss.Arielle</p>
-      </div>
+        <table>
+          <tr class="media">
+            <th>
+              <a href="https://www.linkedin.com/in/arielle-bosshard-509583110/" > LinkedIn </a>
+            </th>
+            <th>
+              <a href="https://www.behance.net/ariellebosshard" > Behance</a>
+            </th>
+            <th>
+              <a href="https://www.instagram.com/rel._.boss/" > Instagram</a>
+            </th>
+            <th><a href="https://github.com/arielle-bosshard" > Github</a></th>
+          </tr>
+        </table>
+        <div class="copyright">
+          <p>copyright2020 | Boss.Arielle</p>
+        </div>
     </footer>
 
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>

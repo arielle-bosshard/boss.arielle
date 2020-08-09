@@ -116,14 +116,17 @@ body {
   min-height: 100%;
 }
 
-main {
+#home-page main {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   clear: both;
-  padding-top: 35%;
+  width: 100%;
   padding-bottom: 0px;
+}
+.content {
+  width: 100%;
 }
 
 h1 {
@@ -140,13 +143,13 @@ h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   color: #5e5e5e;
-  margin: 1.25em 0 0.5em 0;
+  margin: 0 0 0.5em 0;
 }
 
 p {
   font-size: 0.75em;
   line-height: 1.7em;
-  margin: 1.75em 0;
+  margin: 0 0 1.75em 0;
 }
 
 ul, 
@@ -159,46 +162,129 @@ a {
   text-decoration: none;
 }
 
-footer {
+/***** HEADER *****/
+table {
+  border-collapse: collapse;
+}
+header {
+  width: 90%;
+  margin: 5%;
+}
+.logo {
+  width: 30%;
+}
+.logo img {
+  width: 100%;
+}
+.heading {
+  padding-top: 11%;
+  padding-left: 5px;
+}
+.heading h1 {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+/*** Nav Menu ***/
+.navbar {
+  padding-bottom: 21%;
+}
+.nav {
+  display: inline-block;
+  cursor: pointer;
+  float: right;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 40px;
+  height: 2px;
+  background-color: #5e5e5e;
+  margin: 7px 0;
+  transition: 0.4s;
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+/***** FOOTER *****/
+#home-page footer, #contact footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: fit-content;
 }
-
-footer p {
+footer p, footer a {
   font-size: 0.5em;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  margin: 0;
   clear: both;
+  text-decoration: none;
+  font-weight: normal;
+}
+footer table {
+  width: 90%;
+  margin-left: 5%;
+}
+footer th {
+  width: 25%;
+  padding: 0 3px;
+}
+footer .copyright p {
+  text-align: center;
 }
 
 
 /***** LANDING PAGE ******/
 header{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  clear: both;
-}
-.nav {
-  margin: 20px 0;
   width: 90%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  clear: both
-}
-.nav img {
-  width: 60%;
-}
-
+} 
 .logo-main {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 90%;
+  margin: 25% 0;
 }
 .logo-main img{
   display: flex;
@@ -208,162 +294,142 @@ header{
   width: 75%;
 }
 
-/***** NAV PAGE *****/
-
-#nav-page main {
-  padding-top: 20%;
-}
-.logo-nav, .logo-nav a {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  clear: both;
-  margin: auto;
-}
-.logo-nav img {
-  width: 50%
-}
-.open-nav {
-  width: 100%;
-  margin: 25px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  clear: both;
-}
-.heading-style {
-  display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.heading-style img {
-  margin-bottom: 1.75em;
-  width: 35%;
-  height: 1px;
-}
-
-/***** PAGES *****/
+/***** PAGES GENERAL *****/
 .page-main {
-  margin-top: 0;
   padding-top: 0;
-  display: flex;
-  justify-content: center;
-}
-.title, .content {
   width: 90%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.title {
-  margin-top: -40px;
-}
-.title a {
-  width: 30%;
-}
-.title img {
-  width: 100%;
-}
-.title .heading {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  margin-left: 2%;
-  margin-bottom: 6%;
-}
-.heading img {
-  width: 35%;
-  height: 1px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  margin: 0 5%;
 }
 
 /***** ABOUT PAGE *****/
 #about .profile-pic {
-  width: 91%;
+  width: 100%;
   background: url(../img/profile-pic.png) no-repeat;
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  height: 500px;
+  height: 200px;
 }
 
 /***** SERVICES PAGE *****/
 
-#services p {
-  margin: 0;
-}
 
 /***** PORTFOLIO PAGE *****/
 
-#portfolio .project {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+  background-color: transparent;
+  width: 250px;
+  height: 400px;
+  border: 1px solid white;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  float: left;
+  margin-bottom: 20px;
 }
-#portfolio .project img {
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1.5em;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+  background-color: white;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: white;
+  color: #5e5e5e;
+  transform: rotateY(180deg);
+}
+
 #portfolio .project h2 {
   margin: 0.5em 0 0 0;
 }
 #portfolio .project p {
-  margin: 0;
+  margin-bottom: 1.5em;
 }
-.reviews h2 {
-  margin-top: 2em;
+.review-border {
+  background: #5e5e5e;
+  height: 1px;
+  width: 80%;
+  margin: 1em 10% ;
+  clear: both;
+}
+.reviews {
+  text-align: center;
 }
 .reviews p {
   margin-top: 0.5em;
+  margin-bottom: 0;
 }
-
 
 /***** CONTACT PAGE *****/
-
-input[type=text], textarea {
-  font-size: 0.75em;
-  box-sizing: content-box;
-  border: none;
-  border-bottom: 1px solid #5e5e5e;
-  width: 92%;
-  color: #5e5e5e;
-  font-style: italic;
-  padding: 1em;
-  outline: none;
-}
- 
-input[type=submit] {
-  width: 93%;
-  padding: 1em 0;
-  margin: 1em;
-  background-color: whitesmoke;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  font-size: 0.75em;
-  color: #5e5e5e;
-  border: none;
-  text-align: center;
-}
 
 #contact p {
   margin: 0;
   padding-left: 5px;
 }
+#contact .my-details p {
+  padding-bottom: 2em;
+}
 #contact .social-media p {
   font-size: 1em;
+  padding-right: 1em;
+  padding-bottom: 3em;
   float: left;
-  padding-right: 20px;
 }  
+
+/***** 404 PAGE *****/
+
+#non-page header {
+  width: 90%;
+  height: 70px;
+  margin: 5%;
+}
+#non-page main {
+  width: 90%;
+  margin: 5%;
+}
+.non-content {
+  width: 100%;
+  background: url(../img/logo.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+  overflow: hidden;
+}
+#non-page h1, #non-page p {
+  text-align: center;
+  margin: 0;
+}
+#non-page h1 {
+  padding-top: 40%;
+}
+#non-page p {
+  padding-bottom: 40%;
+}
+
 
 
 /* ==========================================================================
@@ -458,18 +524,7 @@ input[type=submit] {
 @media only screen and (min-width: 768px) {
   /*Tablet styles here*/
   /* General styles */
-  main {
-    padding-top: 18%;
-  }
-  .nav {
-    margin: 40px 0
-  }
-  .nav a {
-    width: 10%;
-  }
-  .nav img {
-    width: 100%;
-  }
+
   h1 {
     font-size: 1.75em;
   }
@@ -479,66 +534,72 @@ input[type=submit] {
   p {
     font-size: 1em;
   }
-  footer p {
+  footer p, footer a {
     font-size: 0.75em;
   }
- 
-  /* Nav Page */
-  .logo-nav img {
-    width: 40%;
+  .main {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  /* Header */
+  header {
+    width: 3% 5%;
+  }
+  .logo {
+    width: 15%;
+  }
+  .heading {
+    padding-top: 6%;
+  }
+  .navbar {
+    padding-bottom: 12%;
+  }
+  .bar1, .bar2, .bar3 {
+    width: 55px;
   }
   
   /* About page */
-  .heading img {
-    height: 1.8px;
+  #about .profile-pic {
+    height: 500px;
   }
   
   /* Services */
 
 
   /* Portfolio */
-
-  #portfolio .project img {
-    margin-top: 2em;
-    margin-left: 10%;
-    width: 80%;
-  }
-  #portfolio .project p {
-    margin-top: 0.5em;
+  .flip-box {
+    width: 350px;
+    height: 450px;
+  }  
+  #portfolio .reviews {
+    clear: both;
+    width: 90%;
+    margin: 5%;
   }
 
   /* Contact */
+  #contact .contact-image {
+    width: 60%;
+    background: url(../img/contact-image.png) no-repeat;
+    background-size: cover;
+    background-position: left;
+    height: 500px;
+  }
+  .my-details, .social-media {
+    width: 38%;
+    padding: 5px 1%;
+  }
+  .contact-image, .my-details, .social-media {
+    float: left; 
+   }
 
-  input[type=text], textarea {
-    width: 100%;
-  }
-  .contact-form {
-    width: 94%;
-  }
-  .social-media {
-    margin-left: 5%;
-    width: 40%;
-  }
+
 }
 
 @media only screen and (min-width: 1025px) {
   /*Desktop styles here*/
   /* General styles */
-  main {
-    padding-top: 20%;
-  }
-  .page-main {
-    margin-top: -30px;
-  }
-  .nav {
-    margin: 40px 0
-  }
-  .nav a {
-    width: 5%;
-  }
-  .nav img {
-    width: 100%;
-  }
+  
   h1 {
     font-size: 2.25em;
   }
@@ -549,35 +610,31 @@ input[type=submit] {
   p {
     font-size: 1.2 em;
   }
+  /* Header */
+  header {
+    margin: 2% 5%;
+  }
+  .logo {
+    width: 10%;
+  }
+  .heading {
+    padding-top: 4%;
+  }
+  .navbar {
+    padding-bottom: 8.5%;
+  }
+  .bar1, .bar2, .bar3 {
+    width: 70px;
+  }
   /* Landing Page */
   #home-page main {
     padding-top: 0px;
   }
+  .logo-main {
+    margin: 3% 0;
+  }
   .logo-main img {
     width: 40%;
-  }
- 
-  /* Nav Page */
-  #nav-page main {
-    padding-top: 150px;
-  }
-  .open-nav {
-    display: flex;
-    flex-flow: row wrap;
-  }
-  .logo-nav img {
-    width: 40%;
-  }
-  .heading-style {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 2em;
-  }
-  .heading-style img {
-    width: 35%;
-    height: 2px;
   }
   
   /* About page */
@@ -596,51 +653,34 @@ input[type=submit] {
   }
 
   /* Portfolio */
-  #portfolio .project {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  #portfolio .project img {
-    margin-top: 2em;
-    margin-left: 10%;
-    width: 50%;
-  }
-  #portfolio .project p {
-    margin-top: 0.5em;
-  }
-  #portfolio .project img {
-    display: flex;
-    justify-content: flex-start;
-    width: 50%
-  }
-  #portfolio .project .article {
-    width: 45%;
-    padding: 2%;
-  }
-  #portfolio .reviews {
-    width: 90%;
-  }
+  
 
   /* Contact */
+  #contact .contact-image {
+    width: 70%;
+    height: 500px;
+  }
+  .my-details, .social-media {
+    width: 28%;
+    padding: 5px 1%;
+  }
+  #contact footer {
+    position: inherit;
+  }
 
-  input[type=text], textarea {
-    width: 95%;
+  /* 404 PAGE */
+
+  .non-content {
+    width: 50%;
+    margin: 0 25%;
   }
-  .contact-form {
-    width: 45%;
+  #non-page h1 {
+    padding-top: 20%;
   }
-  .my-details {
-    width: 45%;
-    padding-left: 5em;
+  #non-page p {
+    padding-bottom: 20%;
   }
-  .social-media {
-    width: 45%;
-    margin-top: -100px;
-    margin-left: 50%;
-    padding-left: 2.5em;
-  }
+  
 }
 
 @media print,

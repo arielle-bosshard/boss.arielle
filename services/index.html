@@ -26,19 +26,42 @@
 
   <div class='container'>
     <header>
-      <div class="nav">
-        <a href="../nav/index.html"><img src="../img/nav-three.png" alt="Menu Icon"></a>
-      </div>
+      <table>
+        <td>
+          <th class="logo">
+            <a href="../index.html"><img src="../img/logo-text.png" alt="Logo"></a>
+          </th>
+          <th class="heading">
+            <h1>Services</h1>
+          </th>
+          <th class="navbar">
+            <div class="nav">
+              <span onclick="openNav()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </span>
+            </div>
+          </th>
+        </td>
+      </table>
     </header>
 
     <main class="page-main">
-      <div class="title">
-        <a href="../index.html"><img class="logo" src="../img/logo-text.png" alt="Logo"></a>
-        <div class="heading">
-          <h1>Services</h1>
-          <img src="../img/rectangle.png" alt="underline">
+       <!-- The overlay -->
+       <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+          <a href="../about/index.html">About</a>
+          <a href="../portfolio/index.html">Portfolio</a>
+          <a href="../contact/index.html">Contact</a>
         </div>
       </div>
+      
       <div class="content">
         <h2>Responsive Website Design</h2>
         <p>Creating simple yet dynamic designs that keep elegance and user experience in mind when organising content and branding. Competent with Adobe Photoshop, Illustrator and InDesign to create beautiful and organised designs for your website.</p>
@@ -51,24 +74,31 @@
     </main>
 
     <footer>
-      <div class="media">
-        <p>ariellebosshard@outlook.com| 
-          <a href="https://www.linkedin.com/in/arielle-bosshard-509583110/" > LinkedIn </a> |  
-          <a href="https://www.behance.net/ariellebosshard" > Behance</a> | 
-          <a href="https://www.instagram.com/rel._.boss/" > Instagram</a> |  
-          <a href="https://github.com/arielle-bosshard" > Github</a></p>
-      </div>
+      <table>
+        <tr class="media">
+          <th>
+            <a href="https://www.linkedin.com/in/arielle-bosshard-509583110/" > LinkedIn </a>
+          </th>
+          <th>
+            <a href="https://www.behance.net/ariellebosshard" > Behance</a>
+          </th>
+          <th>
+            <a href="https://www.instagram.com/rel._.boss/" > Instagram</a>
+          </th>
+          <th><a href="https://github.com/arielle-bosshard" > Github</a></th>
+        </tr>
+      </table>
       <div class="copyright">
         <p>copyright2020 | Boss.Arielle</p>
       </div>
     </footer>
   </div> <!--Close container-->
 
-  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+  <script src="../js/vendor/modernizr-3.8.0.min.js"></script>
+  <script src="../https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="../js/plugins.js"></script>
+  <script src="../js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>

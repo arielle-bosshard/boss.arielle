@@ -1,62 +1,77 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <title>Page Not Found</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    * {
-      line-height: 1.2;
-      margin: 0;
-    }
+  <head>
+    <meta charset="utf-8">
+    <title>Page Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
 
-    html {
-      color: #888;
-      display: table;
-      font-family: sans-serif;
-      height: 100%;
-      text-align: center;
-      width: 100%;
-    }
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+      
+  </head>
 
-    body {
-      display: table-cell;
-      vertical-align: middle;
-      margin: 2em auto;
-    }
+  <body id="non-page">
+    <header>
+      <div class="nav">
+        <span onclick="openNav()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </span>
+      </div>
+    </header>
+    
+    <main>
+      <!-- The overlay -->
+      <div id="myNav" class="overlay">
 
-    h1 {
-      color: #555;
-      font-size: 2em;
-      font-weight: 400;
-    }
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-    p {
-      margin: 0 auto;
-      width: 280px;
-    }
+        <!-- Overlay content -->
+        <div class="overlay-content">
+          <a href="about/index.html">About</a>
+          <a href="services/index.html">Services</a>
+          <a href="portfolio/index.html">Portfolio</a>
+          <a href="contact/index.html">Contact</a>
+        </div>
 
-    @media only screen and (max-width: 280px) {
+      </div>
 
-      body,
-      p {
-        width: 95%;
-      }
+      <div class="non-content">
+        <a href="index.html"> <h1>Hmmm...</h1>
+        <p>It seems this page does not appear to exist. <br>Let's find a way back to the main website shall we? <br>Cheers!</p></a>
+      </div>
+    </main>
+    
+    <footer>
+      <table>
+        <tr class="media">
+          <th>
+            <a href="https://www.linkedin.com/in/arielle-bosshard-509583110/" > LinkedIn </a>
+          </th>
+          <th>
+            <a href="https://www.behance.net/ariellebosshard" > Behance</a>
+          </th>
+          <th>
+            <a href="https://www.instagram.com/rel._.boss/" > Instagram</a>
+          </th>
+          <th><a href="https://github.com/arielle-bosshard" > Github</a></th>
+        </tr>
+      </table>
+      <div class="copyright">
+        <p>copyright2020 | Boss.Arielle</p>
+      </div>
+    </footer>
 
-      h1 {
-        font-size: 1.5em;
-        margin: 0 0 0.3em;
-      }
-
-    }
-  </style>
-</head>
-
-<body>
-  <h1>Page Not Found</h1>
-  <p>Sorry, but the page you were trying to view does not exist.</p>
-</body>
+    <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 
 </html>
 <!-- IE needs 512+ bytes: https://blogs.msdn.microsoft.com/ieinternals/2010/08/18/friendly-http-error-pages/ -->
